@@ -1,0 +1,162 @@
+@import "../../node_modules/normalize.css/normalize.css";
+@import "../../node_modules/milligram/dist/milligram.min.css";
+// Colors
+@import "colors";
+
+
+.button,
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit']{
+    border-radius: 0;
+}
+
+.row{
+    margin-left: 0;
+    width: 100%;
+}
+html, body{
+    height: 100%;
+}
+body{
+    .hidden{
+        display: none;
+    }
+    background-color: @back;
+    color: @font;
+    header{
+        -webkit-app-region: drag;
+        height: 35px;
+        text-align: center;
+        border-bottom: 1px solid @font;
+        h6{
+            -webkit-user-select: none;
+            -webkit-app-region: drag;
+            margin: 0;
+            line-height: 35px;
+        }
+    }
+    logsy-sidebar{
+        button, .button.button-outline{
+            &.error, &.critical{
+                color: @red;
+                border-color: @red;
+                &.active{
+                    background-color: @red;
+                    color: @light;
+                }
+            }
+            &.info, &.notice, &.debug{
+                color: @blue;
+                border-color: @blue;
+                &.active{
+                    background-color: @blue;
+                    color: @light;
+                }
+            }
+            &.warning{
+                color: @orange;
+                border-color: @orange;
+                &.active{
+                    background-color: @orange;
+                    color: @light;
+                }
+            }
+            &:hover{
+                color: @light;
+                border-color: @light;
+            }
+        }
+    }
+    logsy-workspace{
+        height: calc(~"100% - 35px");
+        logsy-sidebar{
+            padding: 1rem !important;
+        }
+        logsy-content{
+            height: 100%;
+            padding: 0 !important;
+            logsy-views{
+                height: 100%;
+                pre.fileDisplay{
+                    margin: 0;
+                    overflow: scroll;
+                    max-height: 100%;
+                    position: relative;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    footer{
+        height: 35px;
+        background-color: @darkNuance;
+        color: @grey;
+        .fileName{
+            line-height: 35px;
+            margin: 0;
+        }
+    }
+}
+
+
+// Loader
+.loadingTool{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(34, 49, 63, 0.48);
+    z-index: 10;
+    display: none;
+}
+.loader {
+  margin: 60px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(255, 255, 255, 0.18);
+  border-right: 1.1em solid rgba(255, 255, 255, 0.18);
+  border-bottom: 1.1em solid rgba(255, 255, 255, 0.18);
+  border-left: 1.1em solid @purple;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+  position: fixed;
+  left: 60%;
+  top: 40%;
+  z-index: 90;
+  display: none;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+@import "theme-logsy";

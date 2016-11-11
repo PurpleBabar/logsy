@@ -1,0 +1,152 @@
+@import "assets/css/colors";
+
+.fileDisplay{
+    background-color: @back;
+    color: @font;
+    border-color: @light;
+    border-width: 0.1rem;
+    font-family: inherit;
+    font-size: 1.5rem;
+    .logsy_line{
+        margin-left: 3rem;
+        &:before {
+            background: @darkNuance;
+            color: @grey;
+            content: attr(data-line);
+            width: 3rem;
+            padding-left: 0.5rem;
+            position: absolute;
+            left: 0;
+        }
+    }
+    &.hundredth_line{
+        .logsy_line{
+            margin-left: 4rem;
+            &:before{
+                width: 4rem;
+            }
+        }
+    }
+    .logsy_print-margin {
+        width: 1px;
+        background: #555651;
+    }
+    .logsy_cursor {
+        color: #F8F8F0
+    }
+    .logsy_marker-layer .logsy_selection {
+        background: @grey;
+    }
+
+    .logsy_multiselect .logsy_selection.logsy_start {
+        box-shadow: 0 0 3px 0px #272822;
+    }
+
+    .logsy_marker-layer .logsy_step {
+        background: @turquoise;
+    }
+
+    .logsy_marker-layer .logsy_bracket {
+        margin: -1px 0 0 -1px;
+        border: 1px solid @grey;
+    }
+
+    .logsy_marker-layer .logsy_active-line {
+        background: @darker;
+    }
+
+    .logsy_gutter-active-line {
+        background-color: @darker;
+    }
+
+    .logsy_marker-layer .logsy_selected-word {
+        border: 1px solid @grey;
+    }
+
+    .logsy_invisible {
+        color: @grey;
+    }
+
+    .logsy_keyword,
+    .logsy_storage,
+    .logsy_error,
+    .logsy_critical {
+        color: @red;
+    }
+
+    .logsy_punctuation,
+    .logsy_punctuation.logsy_tag {
+        color: @grey;
+    }
+
+    .logsy_character,
+    .logsy_language,
+    .logsy_numeric,
+    .logsy_other,
+    .logsy_ip
+    {
+        color: @purple;
+    }
+
+    .logsy_date,
+    .logsy_time,
+    .logsy_dateTime{
+        color: @turquoise;
+    }
+
+    .logsy_invalid {
+        color: @light;
+        background-color: @red;
+    }
+
+    .logsy_http {
+        color: @light;
+        background-color: @purple;
+    }
+
+    .logsy_constant,
+    .logsy_function,
+    .logsy_info,
+    .logsy_notice
+     {
+        color: @blue;
+    }
+
+    .logsy_warning{
+        color: @orange;
+    }
+
+    .logsy_fold {
+        background-color: @green;
+        border-color: @light
+    }
+
+    .logsy_type,
+    .logsy_class {
+        font-style: italic;
+        color: @blue;
+    }
+
+    .logsy_link,
+    .logsy_debug {
+        color: @green
+    }
+
+    .logsy_parameter {
+        font-style: italic;
+        color: @orange;
+    }
+
+    .logsy_string,
+    .logsy_file {
+        color: @yellow;
+    }
+
+    .logsy_comment {
+        color: @grey;
+    }
+
+    // .logsy_indent-guide {
+    //     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAEklEQVQImWPQ0FD0ZXBzd/wPAAjVAoxeSgNeAAAAAElFTkSuQmCC) right repeat-y
+    // }
+}

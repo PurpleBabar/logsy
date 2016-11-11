@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Logsy</title>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+    <!-- Logsy CSS -->
+    <!-- <link rel="stylesheet" href="assets/css/logsy.css"> -->
+</head>
+<body>
+    <!-- <header id='header' class="row">
+        <section class="column">
+            <h6>Logsy</h6>
+        </section>
+    </header> -->
+    <logsy-workspace class="row">
+        <logsy-sidebar class="column column-20">
+            <h5>Files</h5>
+            <button type="button" name="button" id="select-file">Open File...</button>
+
+            <h5>Filters</h5>
+            <div class="filter">
+                <button class="button button-outline error" data-filter="error">Error</button>
+            </div>
+            <div class="filter">
+                <button class="button button-outline critical" data-filter="critical">Critical</button>
+            </div>
+            <div class="filter">
+                <button class="button button-outline info" data-filter="info">Info</button>
+            </div>
+            <div class="filter">
+                <button class="button button-outline debug" data-filter="debug">Debug</button>
+            </div>
+            <div class="filter">
+                <button class="button button-outline notice" data-filter="notice">Notice</button>
+            </div>
+            <div class="filter">
+                <button class="button button-outline warning" data-filter="warning">Warning</button>
+            </div>
+        </logsy-sidebar>
+        <div class="loadingTool">
+        </div>
+        <div class="loader">Loading...</div>
+        <logsy-content class="column column-80">
+            <logsy-tabs>
+            </logsy-tabs>
+            <logsy-views>
+                <pre id="fileDisplay" class="fileDisplay"></pre>
+            </logsy-views>
+        </logsy-content>
+    </logsy-workspace>
+    <footer class="row">
+        <div class="column column-20">
+
+        </div>
+        <div class="column column-80">
+            <h6 class="fileName"></h6>
+        </div>
+    </footer>
+</body>
+<script>
+    var link = document.createElement('link');
+    link.setAttribute('rel', 'stylesheet');
+    link.setAttribute('href', require('path').join(__dirname, 'assets/css', 'logsy.min.css'));
+    document.head.appendChild(link);
+</script>
+<script>
+// You can also require other files to run in this process
+require('./renderer.js')
+</script>
+</html>
