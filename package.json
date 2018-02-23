@@ -28,8 +28,8 @@
   },
   "dependencies": {
       "jquery": "^2.2.3",
-      "rainbow-code": "@2.1.2",
-      "always-tail": "@0.2.0",
-      "event-stream": "@3.3.4"
+      "rainbow-code": "^2.1.2",
+      "always-tail": "^0.2.0",
+      "event-stream": "^3.3.4"
   }
 }
